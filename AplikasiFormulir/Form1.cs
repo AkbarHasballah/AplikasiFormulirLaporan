@@ -527,7 +527,7 @@ if (Regex.IsMatch(tbemail.Text, @"^^[^@\s]+@[^@\s]+(\.[^@\s]+)+$"))
                 if (pilihan[11].Checked)
                 {
                     total += harga12 * gt;
-                }
+                }tbtotal.Text = total.ToString();
 
             }
             string kapal, kapten, kode, docking1, fishG, ikan1;
