@@ -75,20 +75,46 @@
             this.cblayang = new System.Windows.Forms.CheckBox();
             this.cbteri = new System.Windows.Forms.CheckBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.hapusdata = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.erb = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.ers = new System.Windows.Forms.ErrorProvider(this.components);
             this.erw = new System.Windows.Forms.ErrorProvider(this.components);
-            this.hapusdata = new System.Windows.Forms.Button();
+            this.dgv_laporan = new System.Windows.Forms.DataGridView();
+            this.kapal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kapten = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.docking1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fishG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ikan1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.checkBox10 = new System.Windows.Forms.CheckBox();
+            this.checkBox11 = new System.Windows.Forms.CheckBox();
+            this.checkBox12 = new System.Windows.Forms.CheckBox();
+            this.tbtotal = new System.Windows.Forms.TextBox();
+            this.tbton = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.gbfg.SuspendLayout();
             this.gbjenis.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.erb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erw)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_laporan)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -590,17 +616,26 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.hapusdata);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Location = new System.Drawing.Point(75, 651);
+            this.panel2.Location = new System.Drawing.Point(73, 819);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(956, 40);
             this.panel2.TabIndex = 3;
             // 
+            // hapusdata
+            // 
+            this.hapusdata.BackColor = System.Drawing.Color.Orange;
+            this.hapusdata.Location = new System.Drawing.Point(889, 714);
+            this.hapusdata.Name = "hapusdata";
+            this.hapusdata.Size = new System.Drawing.Size(67, 23);
+            this.hapusdata.TabIndex = 1;
+            this.hapusdata.Text = "Clear";
+            this.hapusdata.UseVisualStyleBackColor = false;
+            this.hapusdata.Click += new System.EventHandler(this.hapusdata_Click);
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Orange;
-            this.button2.Location = new System.Drawing.Point(876, 7);
+            this.button2.Location = new System.Drawing.Point(962, 714);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(67, 23);
             this.button2.TabIndex = 0;
@@ -639,23 +674,265 @@
             this.erw.ContainerControl = this;
             this.erw.Icon = ((System.Drawing.Icon)(resources.GetObject("erw.Icon")));
             // 
-            // hapusdata
+            // dgv_laporan
             // 
-            this.hapusdata.BackColor = System.Drawing.Color.Orange;
-            this.hapusdata.Location = new System.Drawing.Point(781, 7);
-            this.hapusdata.Name = "hapusdata";
-            this.hapusdata.Size = new System.Drawing.Size(67, 23);
-            this.hapusdata.TabIndex = 1;
-            this.hapusdata.Text = "Clear";
-            this.hapusdata.UseVisualStyleBackColor = false;
-            this.hapusdata.Click += new System.EventHandler(this.hapusdata_Click);
+            this.dgv_laporan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_laporan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.kapal,
+            this.kapten,
+            this.kode,
+            this.docking1,
+            this.fishG,
+            this.ikan1});
+            this.dgv_laporan.Location = new System.Drawing.Point(73, 700);
+            this.dgv_laporan.Name = "dgv_laporan";
+            this.dgv_laporan.Size = new System.Drawing.Size(956, 113);
+            this.dgv_laporan.TabIndex = 6;
+            // 
+            // kapal
+            // 
+            this.kapal.HeaderText = "Nama Kapal";
+            this.kapal.Name = "kapal";
+            // 
+            // kapten
+            // 
+            this.kapten.HeaderText = "Nama Kapten";
+            this.kapten.Name = "kapten";
+            // 
+            // kode
+            // 
+            this.kode.HeaderText = "GT";
+            this.kode.Name = "kode";
+            // 
+            // docking1
+            // 
+            this.docking1.HeaderText = "Tempat Docking";
+            this.docking1.Name = "docking1";
+            // 
+            // fishG
+            // 
+            this.fishG.HeaderText = "Fishing Ground";
+            this.fishG.Name = "fishG";
+            // 
+            // ikan1
+            // 
+            this.ikan1.HeaderText = "Hasil Tangkapan";
+            this.ikan1.Name = "ikan1";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(722, 700);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Input";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(75, 636);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(88, 17);
+            this.checkBox1.TabIndex = 8;
+            this.checkBox1.Text = "Teri 5000/kg";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(398, 636);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(111, 17);
+            this.checkBox2.TabIndex = 9;
+            this.checkBox2.Text = "Layang 20000/kg";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(593, 668);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(125, 17);
+            this.checkBox3.TabIndex = 10;
+            this.checkBox3.Text = "Barracuda 21000/kg";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(510, 636);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(77, 17);
+            this.checkBox4.TabIndex = 11;
+            this.checkBox4.Text = "kakap 23k";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Location = new System.Drawing.Point(510, 667);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(70, 17);
+            this.checkBox5.TabIndex = 12;
+            this.checkBox5.Text = "Cumi 21k";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(398, 668);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(86, 17);
+            this.checkBox6.TabIndex = 13;
+            this.checkBox6.Text = "Tenggiri 22K";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Location = new System.Drawing.Point(294, 668);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(74, 17);
+            this.checkBox7.TabIndex = 14;
+            this.checkBox7.Text = "Layur 21K";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            // 
+            // checkBox8
+            // 
+            this.checkBox8.AutoSize = true;
+            this.checkBox8.Location = new System.Drawing.Point(184, 636);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(92, 17);
+            this.checkBox8.TabIndex = 15;
+            this.checkBox8.Text = "Cakalang 21k";
+            this.checkBox8.UseVisualStyleBackColor = true;
+            // 
+            // checkBox9
+            // 
+            this.checkBox9.AutoSize = true;
+            this.checkBox9.Location = new System.Drawing.Point(184, 668);
+            this.checkBox9.Name = "checkBox9";
+            this.checkBox9.Size = new System.Drawing.Size(72, 17);
+            this.checkBox9.TabIndex = 16;
+            this.checkBox9.Text = "Tuna 33k";
+            this.checkBox9.UseVisualStyleBackColor = true;
+            // 
+            // checkBox10
+            // 
+            this.checkBox10.AutoSize = true;
+            this.checkBox10.Location = new System.Drawing.Point(593, 636);
+            this.checkBox10.Name = "checkBox10";
+            this.checkBox10.Size = new System.Drawing.Size(75, 17);
+            this.checkBox10.TabIndex = 17;
+            this.checkBox10.Text = "Marlin 10k";
+            this.checkBox10.UseVisualStyleBackColor = true;
+            // 
+            // checkBox11
+            // 
+            this.checkBox11.AutoSize = true;
+            this.checkBox11.Location = new System.Drawing.Point(75, 668);
+            this.checkBox11.Name = "checkBox11";
+            this.checkBox11.Size = new System.Drawing.Size(84, 17);
+            this.checkBox11.TabIndex = 18;
+            this.checkBox11.Text = "sailfish 110k";
+            this.checkBox11.UseVisualStyleBackColor = true;
+            // 
+            // checkBox12
+            // 
+            this.checkBox12.AutoSize = true;
+            this.checkBox12.Location = new System.Drawing.Point(294, 636);
+            this.checkBox12.Name = "checkBox12";
+            this.checkBox12.Size = new System.Drawing.Size(80, 17);
+            this.checkBox12.TabIndex = 19;
+            this.checkBox12.Text = "kerapu 10k";
+            this.checkBox12.UseVisualStyleBackColor = true;
+            // 
+            // tbtotal
+            // 
+            this.tbtotal.Location = new System.Drawing.Point(930, 674);
+            this.tbtotal.Name = "tbtotal";
+            this.tbtotal.Size = new System.Drawing.Size(100, 20);
+            this.tbtotal.TabIndex = 21;
+            this.tbtotal.TextChanged += new System.EventHandler(this.tbtotal_TextChanged);
+            // 
+            // tbton
+            // 
+            this.tbton.Location = new System.Drawing.Point(753, 674);
+            this.tbton.Name = "tbton";
+            this.tbton.Size = new System.Drawing.Size(100, 20);
+            this.tbton.TabIndex = 22;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(751, 660);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(94, 13);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "Hasil Tangkapan";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label11.Location = new System.Drawing.Point(852, 679);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(20, 13);
+            this.label11.TabIndex = 25;
+            this.label11.Text = "Kg";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(927, 660);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(72, 13);
+            this.label12.TabIndex = 26;
+            this.label12.Text = "Penghasilan";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label13.Location = new System.Drawing.Point(910, 681);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(21, 13);
+            this.label13.TabIndex = 27;
+            this.label13.Text = "Rp";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.ClientSize = new System.Drawing.Size(1087, 686);
+            this.ClientSize = new System.Drawing.Size(1087, 861);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.hapusdata);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.tbton);
+            this.Controls.Add(this.tbtotal);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.checkBox12);
+            this.Controls.Add(this.checkBox11);
+            this.Controls.Add(this.checkBox10);
+            this.Controls.Add(this.checkBox9);
+            this.Controls.Add(this.checkBox8);
+            this.Controls.Add(this.checkBox7);
+            this.Controls.Add(this.checkBox6);
+            this.Controls.Add(this.checkBox5);
+            this.Controls.Add(this.checkBox4);
+            this.Controls.Add(this.checkBox3);
+            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.dgv_laporan);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
@@ -671,11 +948,12 @@
             this.gbfg.PerformLayout();
             this.gbjenis.ResumeLayout(false);
             this.gbjenis.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.erb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erw)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_laporan)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -732,6 +1010,32 @@
         private System.Windows.Forms.ErrorProvider ers;
         private System.Windows.Forms.ErrorProvider erw;
         private System.Windows.Forms.Button hapusdata;
+        private System.Windows.Forms.DataGridView dgv_laporan;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox checkBox12;
+        private System.Windows.Forms.CheckBox checkBox11;
+        private System.Windows.Forms.CheckBox checkBox10;
+        private System.Windows.Forms.CheckBox checkBox9;
+        private System.Windows.Forms.CheckBox checkBox8;
+        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox tbtotal;
+        private System.Windows.Forms.TextBox tbton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kapal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kapten;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn docking1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fishG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ikan1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
     }
 }
 

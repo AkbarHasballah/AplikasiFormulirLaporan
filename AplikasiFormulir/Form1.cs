@@ -8,15 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Diagnostics.Tracing;
+using System.Security.Cryptography.X509Certificates;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace AplikasiFormulir
 {
     public partial class Form1 : Form
     {
+        int row = 0;   
         public Form1()
         {
             InitializeComponent();
             this.Size = new Size(1103, 424);
+      
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -394,6 +399,7 @@ if (Regex.IsMatch(tbemail.Text, @"^^[^@\s]+@[^@\s]+(\.[^@\s]+)+$"))
             {
                 ikan += cbkerapu.Text + " ";
             }
+            
             MessageBox.Show
                ("Nama Kapal : " + cbkapal.Text +
                    "\nNama Kapten : " + tbkapten.Text +
@@ -405,7 +411,7 @@ if (Regex.IsMatch(tbemail.Text, @"^^[^@\s]+@[^@\s]+(\.[^@\s]+)+$"))
                    "\n" + "\n" +
                    "\nFishing Ground : " + FG +
                    "\nPerolehan Jenis Ikan: " + ikan, " Data Sudah Masuk Ke BOS ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+            
         }
 
         private void hapusdata_Click(object sender, EventArgs e)
@@ -439,6 +445,205 @@ if (Regex.IsMatch(tbemail.Text, @"^^[^@\s]+@[^@\s]+(\.[^@\s]+)+$"))
             rbpapua.Checked = false;
             rbindonesia.Checked = false;
             this.Size = new Size(1103, 748);
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            CheckBox[] pilihan = new CheckBox[12];
+            int[] angka = { 1, 2, 3, 4, 5,6,7,8,9,10,11,12 };
+            pilihan[0] = checkBox1;
+            pilihan[1] = checkBox2;
+            pilihan[2] = checkBox3;
+            pilihan[3] = checkBox4;
+            pilihan[4] = checkBox5;
+            pilihan[5] = checkBox6;
+            pilihan[6] = checkBox7;
+            pilihan[7] = checkBox8;
+            pilihan[8] = checkBox9;
+            pilihan[9] = checkBox10;
+            pilihan[10] = checkBox11;
+            pilihan[11] = checkBox12;
+            int gt;
+            gt = int.Parse(tbton.Text);
+            int harga1 = 5000;
+            int harga2 = 20000;
+            int harga3 = 21000;
+            int harga4 = 23000;
+            int harga5 = 21000;
+            int harga6 = 22000;
+            int harga7 = 21000;
+            int harga8 = 21000;
+            int harga9 = 33000;
+            int harga10 = 10000;
+            int harga11 = 110000;
+            int harga12 = 10000;
+            int total=0;
+            
+            {
+                if (pilihan[0].Checked)
+                {
+                    total += harga1 * gt;
+                }
+                if (pilihan[1].Checked)
+                {
+                    total += harga2 * gt;
+                }
+                if (pilihan[2].Checked)
+                {
+                    total += harga3 * gt;
+                }
+                if (pilihan[3].Checked)
+                {
+                    total += harga4 * gt;
+                }
+                if (pilihan[4].Checked)
+                {
+                    total += harga5 * gt;
+                }
+                if (pilihan[5].Checked)
+                {
+                    total += harga6 * gt;
+                }
+                if (pilihan[6].Checked)
+                {
+                    total += harga7 * gt;
+                }
+                if (pilihan[7].Checked)
+                {
+                    total += harga8 * gt;
+                }
+                if (pilihan[8].Checked)
+                {
+                    total += harga9 * gt;
+                }
+                if (pilihan[9].Checked)
+                {
+                    total += harga10 * gt;
+                }
+                if (pilihan[10].Checked)
+                {
+                    total += harga11 * gt;
+                }
+                if (pilihan[11].Checked)
+                {
+                    total += harga12 * gt;
+                }
+
+            }
+            string kapal, kapten, kode, docking1, fishG, ikan1;
+            kapal = cbkapal.Text;
+            kapten = tbkapten.Text;
+            docking1 = null;
+            if (rbpekalongan.Checked)
+            {
+                docking1 = rbpekalongan.Text;
+            }
+            else if (rbbali.Checked)
+            {
+                docking1 = rbbali.Text;
+            }
+            else if (rbpati.Checked)
+            {
+                docking1 = rbpati.Text;
+            }
+            else if (rbcirebon.Checked)
+            {
+                docking1 = rbcirebon.Text;
+            }
+            else if (rbjakarta.Checked)
+            {
+                docking1 = rbjakarta.Text;
+            }
+            fishG = null;
+            if (rbjawa.Checked)
+            {
+                fishG = rbjawa.Text;
+            }
+            else if (rbmakasar.Checked)
+            {
+                fishG = rbmakasar.Text;
+            }
+            else if (rbpapua.Checked)
+            {
+                fishG = rbpapua.Text;
+            }
+            else if (rbindonesia.Checked)
+            {
+                fishG = rbindonesia.Text;
+            }
+            ikan1 = "";
+            if (cbteri.Checked)
+            {
+                ikan1 += cbteri.Text + " ";
+            }
+            if (cblayang.Checked)
+            {
+                ikan1 += cblayang.Text + " ";
+            }
+            if (cbbaraccuda.Checked)
+            {
+                ikan1 += cbbaraccuda.Text + " ";
+            }
+            if (cbkakap.Checked)
+            {
+                ikan1 += cbkakap.Text + " ";
+            }
+            if (cbcumi.Checked)
+            {
+                ikan1 += cbcumi.Text + " ";
+            }
+            if (cbtenggiri.Checked)
+            {
+                ikan1 += cbtenggiri.Text + " ";
+            }
+            if (cblayur.Checked)
+            {
+                ikan1 += cblayur.Text + " ";
+            }
+            if (cbcakalang.Checked)
+            {
+                ikan1 += cbcakalang.Text + " ";
+            }
+            if (cbtuna.Checked)
+            {
+                ikan1 += cbtuna.Text + " ";
+            }
+            if (cbmarlin.Checked)
+            {
+                ikan1 += cbmarlin.Text + " ";
+            }
+            if (cbsailfish.Checked)
+            {
+                ikan1 += cbsailfish.Text + " ";
+            }
+            if (cbkerapu.Checked)
+            {
+                ikan1 += cbkerapu.Text + " ";
+            }
+
+            dgv_laporan.Rows.Add();
+            dgv_laporan.Rows[row].Cells[0].Value = cbkapal.Text;
+            dgv_laporan.Rows[row].Cells[1].Value = tbkapten.Text;
+            dgv_laporan.Rows[row].Cells[2].Value = tbkode.Text;
+            dgv_laporan.Rows[row].Cells[3].Value = docking1.ToString();
+            dgv_laporan.Rows[row].Cells[4].Value = fishG.ToString();
+            dgv_laporan.Rows[row].Cells[5].Value = ikan1.ToString();
+            row++;
+        }
+
+        private void tbgt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbtotal_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
